@@ -65,7 +65,7 @@ public class WallController : NetworkBehaviour
     {
         if (IsServer && _initColor == ColorType.None)
         {
-            _initColor = (ColorType)UnityEngine.Random.Range(1,4);
+            _initColor = (ColorType)UnityEngine.Random.Range(1, 4);
         }
         _wallColor.Value = _initColor;
         _meshRenderer = GetComponent<MeshRenderer>();
@@ -89,7 +89,7 @@ public class WallController : NetworkBehaviour
         {
             _wallColor.OnValueChanged.Invoke(_wallColor.Value, _wallColor.Value);
         }
-        _pastPosition=transform.position;
+        _pastPosition = transform.position;
     }
     private void Start()
     {
